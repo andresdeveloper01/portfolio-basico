@@ -1,0 +1,50 @@
+@use "head";
+
+$bg: #f7f7f7;
+$fs: 32px;
+$s-color: #464646;
+
+.sobre__mi {
+  align-items: center;
+  background: $bg;
+  display: flex;
+  height: 20rem;
+}
+
+.container-sobre__mi {
+  color: head.$p-color;
+  margin-left: 5%;
+  width: 55%;
+
+  h2 {
+    color: $s-color;
+    font-size: $fs;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 985px) {
+  .container-sobre__mi {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-sobre__mi {
+    margin-left: 4%;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1rem;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "sobre-mi";
+@use "head";
+
+.container__experiencia {
+  align-items: center;
+  background: sobre-mi.$bg;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: sobre-mi.$s-color;
+    font-size: sobre-mi.$fs;
+    line-height: sobre-mi.$fs;
+    padding: 2.5rem 0;
+  }
+
+  .title__experiencia {
+    color: sobre-mi.$s-color;
+    font-size: 22px;
+    padding: 1rem 0;
+  }
+}
+
+.experiencia {
+  width: 416px;
+  &__paragraph {
+    background: sobre-mi.$s-color;
+    bottom: 92px;
+    color: head.$text-color;
+    padding: 1.2rem;
+    position: relative;
+  }
+
+  .container__paragraph {
+    bottom: 14rem;
+    height: 5rem;
+    position: relative;
+    .experiencia__paragraph--description {
+      visibility: var(--show, hidden);
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+      --show: visible;
+      transition: all 1s ease-out;
+    }
+  }
+}
+
+.container__description {
+  bottom: 8rem;
+  position: relative;
+}
+
+@media (max-width: 460px) {
+  .experiencia {
+    width: 320px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .container__experiencia {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 335px) {
+  .container__experiencia {
+    h2 {
+      font-size: 22px;
+    }
+
+    .experiencia {
+      font-size: 14px;
+      width: 250px;
+    }
+  }
+}

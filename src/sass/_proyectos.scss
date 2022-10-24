@@ -1,0 +1,108 @@
+@use "head";
+@use "sobre-mi";
+
+$blue: #2a7ae4;
+
+.container__proyectos {
+  background: head.$p-color;
+  color: sobre-mi.$s-color;
+  padding-bottom: 5rem;
+  h2 {
+    font-size: sobre-mi.$fs;
+    padding: 2.5rem 0;
+    text-align: center;
+  }
+
+  .proyecto {
+    display: flex;
+    height: 380px;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+    &__description {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        cursor: pointer;
+        margin: 8px;
+        padding: 0.8rem;
+      }
+
+      .repo {
+        background: transparent;
+        border: 1px solid $blue;
+        color: $blue;
+      }
+
+      .demo {
+        background: $blue;
+        border: none;
+        color: head.$text-color;
+      }
+    }
+  }
+
+  .juego__ahorcado {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 975px) {
+  .container__proyectos {
+    img {
+      width: 68vh;
+    }
+
+    .proyecto {
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .container__proyectos {
+    img {
+      width: 60vh;
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .container__proyectos {
+    img {
+      width: 45vh;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .container__proyectos {
+    img {
+      width: 35vh;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .container__proyectos {
+    img {
+      width: 27vh;
+    }
+  }
+  .container__proyectos {
+    .proyecto__description {
+      padding: 1rem 0;
+    }
+  }
+}

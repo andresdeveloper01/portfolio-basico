@@ -1,0 +1,61 @@
+@use "head";
+@use "sobre-mi";
+
+$h: 119px;
+
+.container__skills {
+  background: head.$p-color;
+  padding-bottom: 5rem;
+
+  h2 {
+    color: head.$text-color;
+    font-size: sobre-mi.$fs;
+    font-weight: head.$f-w;
+    padding: 3rem 0;
+    text-align: center;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.skill__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  img {
+    height: $h;
+  }
+  li {
+    color: head.$text-color;
+    font-weight: head.$f-w;
+    font-size: 1.2rem;
+    list-style: none;
+  }
+}
+
+@media (max-width: 980px) {
+  $h: 100px;
+
+  .skill__container {
+    img {
+      height: $h;
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  $h: 80px;
+
+  .skill__container {
+    img {
+      height: $h;
+    }
+  }
+}
